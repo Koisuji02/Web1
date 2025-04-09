@@ -1,0 +1,79 @@
+### List all characters (ok)
+GET http://localhost:3001/api/characters
+
+###
+
+### Create a new character (ok)
+POST http://localhost:3001/api/characters
+content-type: application/json
+
+{
+  "name": "Joanne",
+  "fictionGenre": "sci-fi",
+  "role": "main",
+  "hairColor": "blonde",
+  "glasses": true,
+  "gender": "female",
+  "hasPower": false
+}
+
+###
+
+### Update an existing character (ok)
+PUT http://localhost:3001/api/characters/37
+content-type: application/json
+
+{
+  "name": "Joanne",
+  "fictionGenre": "fantasy",
+  "role": "main",
+  "hairColor": "black",
+  "glasses": false,
+  "gender": "female",
+  "hasPower": true,
+  "visible": true
+}
+
+###
+
+### Delete a character (ok)
+DELETE http://localhost:3001/api/characters/38
+
+###
+
+### Reset visibility of all characters (ok)
+POST http://localhost:3001/api/characters/reset-visibility
+
+###
+
+### Update visibility based on a hypothesis (ok)
+POST http://localhost:3001/api/hypotheses/1/update-visibility
+content-type: application/json
+
+{
+  "property": "hairColor",
+  "value": "black",
+  "correct": true
+}
+
+###
+
+### Set secret character for a game (ok)
+POST http://localhost:3001/api/games/0/set-secret-character
+
+###
+
+### List all hypotheses for a game (ok)
+GET http://localhost:3001/api/games/0/hypotheses
+
+###
+
+### Add a new hypothesis to a game (ok)
+POST http://localhost:3001/api/games/0/hypotheses
+content-type: application/json
+
+{
+  "property": "glasses",
+  "value": "true",
+  "correct": false
+}

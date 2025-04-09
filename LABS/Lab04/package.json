@@ -1,0 +1,11 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "The `gw-server` is the server-side app companion for \"GuessWho?\" web game. It presents some APIs to perform some CRUD operations on characters, hypotheses and games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

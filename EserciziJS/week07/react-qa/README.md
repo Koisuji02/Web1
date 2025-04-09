@@ -1,0 +1,10 @@
+- Navbar
+- Question
+    - Text
+    - Author
+- Risposte
+    - Tabella
+        - Answer
+            - Info
+            - Actions
+- Footer
