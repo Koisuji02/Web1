@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form, Button, Row, Col, Alert } from "react-bootstrap";
+import { useNavigate } from "react-router";
 
 function HypothesisForm() {
   const [formState, setFormState] = useState({
@@ -7,6 +8,8 @@ function HypothesisForm() {
     value: "",
     error: null,
   });
+
+  const navigate = useNavigate();
 
   const propertyOptions = {
     fictionGenre: ["comedy", "drama", "fantasy", "action"],
@@ -39,6 +42,9 @@ function HypothesisForm() {
 
     console.log("Hypothesis submitted:", formState);
     setFormState({ property: "", value: "", error: null });
+
+    // Reindirizza alla home
+    navigate("/");
   };
 
   return (
@@ -87,6 +93,13 @@ function HypothesisForm() {
       </Row>
       <Button type="submit" variant="primary">
         Submit Hypothesis
+      </Button>
+      <Button
+        variant="secondary"
+        className="ms-2"
+        onClick={() => navigate("/")}
+      >
+        Cancel
       </Button>
     </Form>
   );

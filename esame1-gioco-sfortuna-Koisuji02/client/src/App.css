@@ -1,0 +1,415 @@
+body, .beach-bg {
+  background: #ffe082;
+  min-height: 100vh;
+}
+
+.beach-card, .beach-home-card, .beach-demo-card, .beach-login-card {
+  border-radius: 24px;
+  box-shadow: 0 4px 24px #81d4fa55, 0 1.5px 0 #ffe082;
+  border: 2.5px solid #4fc3f7;
+  background: rgba(255,255,255,0.92);
+}
+
+.beach-btn, .beach-login-btn, .beach-demo-btn, .beach-newgame-btn, .beach-backhome-btn {
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px #ffe08299;
+  letter-spacing: 0.5px;
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  border: none;
+}
+
+/* NAVBAR & BRAND */
+.beach-navbar {
+  background: linear-gradient(90deg, #4fc3f7 0%, #81d4fa 100%);
+  box-shadow: 0 2px 12px #0002;
+  border-bottom: 4px solid #ffe082;
+  font-family: 'Segoe UI', 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+.beach-navbar-brand {
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: #1565c0;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.beach-nav-link {
+  color: #01579b;
+  font-weight: 600;
+  font-size: 1.08rem;
+}
+.beach-login-btn {
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px #ffe08299;
+  background: #ffe082;
+  color: #01579b;
+  border: none;
+}
+.beach-dark-btn {
+  border: none;
+  background: transparent;
+  color: #ffb300;
+  font-size: 1.2rem;
+}
+
+/* HOME PAGE */
+.beach-home-card {
+  max-width: 480px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px #81d4fa55, 0 1.5px 0 #ffe082;
+  border: 2.5px solid #4fc3f7;
+  margin-top: 40px;
+  padding: 2.5em 2em;
+}
+.beach-title {
+  font-family: 'Segoe UI', 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-weight: 900;
+  color: #0288d1;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+.beach-home-msg {
+  font-size: 1.15rem;
+  color: #01579b;
+  font-weight: 500;
+}
+
+/* DEMO PAGE */
+.beach-demo-card {
+  background: linear-gradient(180deg, #b3e5fc 60%, #fffde7 100%);
+  border: 2.5px solid #0288d1;
+  box-shadow: 0 4px 24px #81d4fa55, 0 1.5px 0 #ffe082;
+  border-radius: 24px;
+}
+.beach-demo-form {
+  background: rgba(255,255,255,0.97);
+  border: 2px solid #4fc3f7;
+  box-shadow: 0 2px 8px #81d4fa33;
+  border-radius: 18px;
+}
+.beach-demo-btn {
+  background: #4fc3f7;
+  color: #01579b;
+  border: none;
+}
+.beach-demo-btn:hover {
+  background: #0288d1;
+  color: #fffde7;
+}
+.beach-demo-cards-title {
+  color: #0288d1;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+.beach-card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-bottom: 8px;
+  color: #0288d1;
+  text-align: center;
+}
+.beach-card-imgbox {
+  min-height: 162px;
+  margin: 8px 0;
+}
+.beach-card-img {
+  width: 162px;
+  height: 162px;
+  object-fit: cover;
+  border: 2px solid #ffe082;
+  border-radius: 14px;
+  background: #fffde7;
+}
+.beach-card-badluck {
+  text-align: center;
+  padding-top: 8px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #c62828;
+  letter-spacing: 0.5px;
+}
+.beach-timer-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0288d1;
+  letter-spacing: 0.5px;
+}
+
+/* LOGIN PAGE */
+.beach-login-bg {
+  min-height: 80vh;
+}
+.beach-login-card {
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255,255,255,0.97);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px #81d4fa55, 0 1.5px 0 #ffe082;
+  border: 2.5px solid #4fc3f7;
+  padding: 2.5em 2em;
+}
+.beach-form-label {
+  color: #0288d1;
+  font-weight: 600;
+}
+.beach-form-input {
+  border-radius: 16px;
+  border: 2px solid #b3e5fc;
+  font-weight: 600;
+}
+
+/* Animazione clessidra per il timer demo */
+.hourglass-anim {
+  display: inline-block;
+  animation: hourglass-spin 1.2s linear infinite;
+}
+@keyframes hourglass-spin {
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive fix per la card centrale */
+@media (max-width: 600px) {
+  .beach-card, .beach-home-card, .beach-login-card { padding: 1.2em; }
+  .beach-title, .home-page h1 { font-size: 1.3rem; }
+  .beach-card-img, .beach-card-imgbox { width: 100px; height: 100px; min-height: 100px; }
+}
+
+/* PAGE NOT FOUND STYLING */
+.notfound-container {
+  min-height: 80vh;
+}
+.notfound-404 {
+  font-size: 6rem;
+  letter-spacing: 0.12em;
+  color: #0288d1;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notfound-four {
+  font-size: 7rem;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+.notfound-sun {
+  font-size: 5.2rem;
+  vertical-align: middle;
+  margin: 0 0.08em;
+  display: inline-block;
+}
+.notfound-lead {
+  font-size: 1.7rem;
+  color: #01579b;
+  font-weight: 700;
+  text-align: center;
+}
+.notfound-desc {
+  font-size: 1.15rem;
+  color: #1565c0;
+  text-align: center;
+}
+
+/* PROFILE & GAME HISTORY STYLING */
+.profile-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.beach-profile-card {
+  border-radius: 20px;
+  box-shadow: 0 4px 24px #81d4fa55, 0 1.5px 0 #ffe082;
+  border: 2.5px solid #4fc3f7;
+  background: rgba(255,255,255,0.96);
+  min-height: 220px;
+}
+.beach-profile-cardlist {
+  margin: 0.5em 0 0 0;
+  padding-left: 1.2em;
+  font-size: 1.08em;
+}
+.beach-profile-result {
+  font-size: 1.08rem;
+  color: #0288d1;
+  font-weight: 600;
+}
+.beach-profile-win {
+  color: #388e3c;
+}
+.beach-profile-lose {
+  color: #c62828;
+}
+.beach-profile-cards {
+  margin-top: 0.5em;
+}
+.beach-profile-round {
+  color: #0288d1;
+  font-size: 0.98em;
+}
+.beach-profile-date {
+  color: #888;
+  font-size: 0.97em;
+}
+
+/* GAME POSITION BUTTONS  */
+.position-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.position-button {
+  background: linear-gradient(180deg, #b3e5fc 0%, #e1f5fe 100%);
+  border: 2px solid #0288d1;
+  border-radius: 16px;
+  padding: 10px 0;
+  color: #01579b;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.position-button:hover {
+  background: linear-gradient(180deg, #81d4fa 0%, #b3e5fc 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.position-button.active {
+  background: linear-gradient(180deg, #29b6f6 0%, #4fc3f7 100%);
+  color: white;
+  border-color: #0277bd;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(2, 136, 209, 0.4);
+}
+
+/* Responsive styling per i bottoni di posizione */
+@media (max-width: 768px) {
+  .position-buttons-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .position-button {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .position-buttons-container {
+    max-width: 100%;
+    margin-top: 5px;
+    gap: 8px;
+  }
+  
+  .position-button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* --- HOME PAGE  (parte 2) */
+.homepage-main-row {
+  width: 100%;
+  max-width: 1100px;
+}
+.homepage-welcome {
+  min-width: 320px;
+  flex: 1 1 350px;
+  max-width: 480px;
+}
+.homepage-game-btn {
+  background: #ffe082 !important;
+  color: #01579b !important;
+  border: 2px solid #ffb300 !important;
+}
+.homepage-rules {
+  min-width: 320px;
+  flex: 1 1 350px;
+  max-width: 600px;
+  background: linear-gradient(180deg, #fffde7 80%, #b3e5fc 100%);
+  border: 2.5px solid #ffb300;
+}
+.homepage-rules-title {
+  font-size: 1.5rem !important;
+}
+.homepage-rules-list {
+  font-size: 1.08rem;
+  color: #01579b;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.homepage-rules-demo {
+  font-size: 1.01rem;
+  color: #0288d1;
+}
+
+/* --- GAME PAGE (parte 2) */
+.beach-timer-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0288d1;
+}
+.timer-danger {
+  color: #c00 !important;
+}
+.beach-form-label-guess {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+}
+.position-buttons-container {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+.position-button {
+  background: #fffde7;
+  border: 2px solid #4fc3f7;
+  color: #0288d1;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.2em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px #ffe08255;
+}
+.position-button.active, .position-button:focus {
+  background: #ffe082;
+  color: #01579b;
+  border: 2px solid #ffb300;
+  outline: none;
+}

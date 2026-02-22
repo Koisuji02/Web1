@@ -1,5 +1,4 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { Link } from "react-router";
 
 function CharacterGrid(props) {
   const { characters, deleteCharacter } = props;
@@ -27,9 +26,7 @@ function CharacterCard(props) {
   return (
     <Card className="text-center">
       <Card.Body>
-        <Card.Title>
-          <Link to={`/characters/${character.id}`}>{character.name}</Link>
-        </Card.Title>
+        <Card.Title>{character.name}</Card.Title>
         <Card.Text>
           <strong>Fiction Genre:</strong> {character.fictionGenre}
           <br />
@@ -45,7 +42,10 @@ function CharacterCard(props) {
         </Card.Text>
         <Button
           variant="danger"
-          onClick={() => deleteCharacter(character.id)}
+          onClick={() => {
+            console.log("Delete button clicked for ID:", character.id); // Log per debug
+            deleteCharacter(character.id)
+          }}
         >
           Delete
         </Button>
